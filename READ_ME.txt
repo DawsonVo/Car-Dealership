@@ -2,13 +2,10 @@ Dawson Vo - 500879711
 Everything works. 
 Includes File I/O. INCLUDES EXCEPTION HANDLING ON "BUY" AND "FPR"
 
-Assignment 2 Updates:
 AccountingSystem class
 Transaction class - unique Transaction ID for each Transaction
 SalesTeam class
 Vehicle class modified for VIN - unique VIN for each vehicle
-CarDealership class modified - New instance variables for AccountingSystem and Transation and commands for SALES Commands
-All SALES commands work
 "SALES"
 "SALES m" - 0=jan, 1=feb, etc
 "SALES TEAM" - Prints sales team formatted "Team: " salesperson ", " salesperson ", " ...etc
@@ -19,9 +16,10 @@ All SALES commands work
 		eg. Bob sells a car in Feb then it gets returned by bob
 			Bob - 1 sales, Feb - 1 car sold
 			total sales ($$) - $0
-cars.txt now contains 24 cars
+
+cars.txt contains 24 cars default
+
 "RET" modified to return last car based on VIN of last car bought
-	Returns will happen within the month car was bought 
 		eg Bought April 30 Returned April 30
 		   Bought April 20 Returned April 20-30
 	
