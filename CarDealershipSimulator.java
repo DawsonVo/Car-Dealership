@@ -35,11 +35,12 @@ public class CarDealershipSimulator
                {
                     //command is just a string that contains the first word from the user input line
                     String command = commandLine.next().toUpperCase();
-                    //System.out.println(command);//outputs the command
                     
-                    //if statements that check possible commands:L,Q,BUY,RET,ADD,FPR,FEL,FAW,SPR,SSR,SMR
-                    //if it doesnt match any of these commands it just loops again to taking user input
-                    //displays all cars that match the required filter conditions: calls displayInventory() method from CarDealership class
+                    /*   
+                         if statements that check possible commands:L,Q,BUY,RET,ADD,FPR,FEL,FAW,SPR,SSR,SMR
+                         if it doesnt match any of these commands it just loops again to taking user input
+                         displays all cars that match the required filter conditions: calls displayInventory() method from CarDealership class
+                    */
                     if (command.equals("L"))
                     {
                          dealership.displayInventory();
@@ -53,20 +54,19 @@ public class CarDealershipSimulator
                     //the buyCar(index) method also returns a reference to the car bought which is set to the Car object lastCar
                     else if (command.equals("BUY"))
                     {
-                         try//trys to scan next then parse it into an int
+                         //trys to scan next then parse it into an int
+                         try 
                          {
                               String index = commandLine.next();
-                              //System.out.println(dealership.cars.get(index).display());
                               lastCar = dealership.buyCar(index);
-                              System.out.println(lastCar); ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////fuix
+                              System.out.println(lastCar);
                          }
                          catch (RuntimeException e)//catches exception for when user does not enter format expected (BUY #)
                          {
                               System.out.println("You have not entered a valid VIN number or there are no cars available for purchase");
-                         }//also catches exception for when user does not follow BUY command with anything
+                         }
                     }
                     //puts the last bought car back into the dealership object's ArrayList
-                    //done by giving lastCar object as parameter then setting it to null so it cant be returned again (You cant return a car that is already returned)
                     else if (command.equals("RET"))
                     {
                          int VIN = -1;
